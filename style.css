@@ -1,0 +1,101 @@
+/* Default css */
+* { box-sizing: border-box; }
+html, body {
+	padding: 0;
+	margin: 0;
+}
+body {
+	background-color: #a46df5;
+}
+
+/* Main css */
+.record-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+}
+
+.video-overlay {
+	position: relative;
+	overflow: hidden;
+	width: 50vh;
+	height: 50vh;
+	border-radius: 50%;
+}
+
+.video-overlay video {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	height: 100%;
+	transform: translate(-50%, -50%);
+}
+
+#playback-preview {
+	display: none;
+}
+
+#playback-preview.playing .play{
+	display: none;
+}
+
+.bola {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background-color: red;
+	border-radius: 50%;
+	margin-left: 4px;
+}
+
+button {
+	margin: 32px 0;
+}
+
+#record, #send {
+	width: 200px;
+	height: 32px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#send {
+	display: none;
+}
+
+.play {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	border: 0;
+	background: transparent;
+	box-sizing: border-box;
+	width: 0;
+	height: 74px;
+	border-color: transparent transparent transparent #ffffff;
+	transition: 100ms all ease;
+	cursor: pointer;
+	border-style: solid;
+	border-width: 37px 0 37px 60px;
+	z-index: 10;
+}
+
+.play:hover {
+	border-color: transparent transparent transparent #404040;
+}
+
+.actions {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 32px;
+}
+.actions > button {
+	margin: 0 8px;
+}
