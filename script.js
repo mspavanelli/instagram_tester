@@ -9,3 +9,12 @@ function startVideoFromCamera() {
 }
 
 window.addEventListener("DOMContentLoaded", startVideoFromCamera);
+
+function displayInfo() {
+  const { userAgent } = navigator;
+  const $info = document.querySelector("#info");
+
+  $info.innerHTML = userAgent;
+}
+
+displayInfo();
