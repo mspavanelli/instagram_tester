@@ -5,13 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Grave seu Vídeo</title>
-    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <video id="video" autoplay></video>
+  <body
+    class="bg-gradient-to-tl from-slate-100 to-slate-200 min-h-screen py-10"
+  >
+    <div class="container mx-auto">
+      <video id="video" autoplay class="w-1/2 mx-auto mb-10"></video>
 
-    <pre id="info"></pre>
+      <h3 class="font-semibold mb-2">User Agent</h3>
+      <pre
+        id="info"
+        class="bg-white shadow rounded p-4 overflow-scroll mb-4"
+      ></pre>
 
-    <script src="./script.js"></script>
+      <h3 class="font-semibold mb-2 text-red-800">Error</h3>
+      <pre
+        id="errors"
+        class="bg-red-200 text-red-700 shadow rounded p-4 overflow-scroll"
+      >
+No errors!</pre
+      >
+    </div>
   </body>
+  <script src="./script.js"></script>
 </html>
