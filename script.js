@@ -4,6 +4,12 @@ function startVideoFromCamera() {
     .then((stream) => {
       const videoElement = document.querySelector("#video");
       videoElement.srcObject = stream;
+
+      const $id = document.querySelector("#mediastream-id");
+      const $active = document.querySelector("#mediastream-active");
+
+      $id.innerHTML = JSON.stringify(stream.id);
+      $active.innerHTML = JSON.stringify(stream.active);
     })
     .catch((err) => {
       const $errors = document.querySelector("#errors");
