@@ -2,6 +2,8 @@ function startVideoFromCamera() {
   navigator.mediaDevices
     .getUserMedia({ video: true })
     .then((stream) => {
+      console.log(stream);
+
       const videoElement = document.querySelector("#video");
       videoElement.srcObject = stream;
 
